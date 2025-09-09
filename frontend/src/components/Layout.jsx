@@ -3,14 +3,14 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="min-h-screen lg:flex relative">
       {/* Sidebar */}
-      <aside className="w-64 min-w-64 bg-white border-r border-yellow-200">
+      <div className="lg:fixed lg:h-screen lg:w-64 lg:z-10">
         <Sidebar />
-      </aside>
+      </div>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-y-auto p-6 bg-yellow-50">
+      <main className="flex-1 overflow-y-auto p-6 bg-yellow-50 lg:ml-64">
         <Outlet />
       </main>
     </div>
